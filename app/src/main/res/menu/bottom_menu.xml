@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/webtoon"
+        android:enabled="true"
+        android:icon="@drawable/menu_1_active"
+        android:title="웹툰"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/recommand_end"
+        android:enabled="true"
+        android:icon="@drawable/menu_2_inactive"
+        android:title="추천완결"
+
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/best"
+        android:enabled="true"
+        android:icon="@drawable/menu_3_inactive"
+        android:title="베스트도전"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/my_menu"
+        android:enabled="true"
+        android:icon="@drawable/menu_4_inactive"
+        android:title="MY"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/mores"
+        android:enabled="true"
+        android:icon="@drawable/menu_5_inactive"
+        android:title="더보기"
+        app:showAsAction="always" />
+
+</menu>

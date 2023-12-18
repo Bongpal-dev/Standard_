@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation_bar"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/vp_top_banner"
+                android:layout_width="match_parent"
+                android:layout_height="210dp"
+                android:elevation="2dp"
+                app:layout_constraintBottom_toTopOf="@id/tl_webtoon_tab_menu" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="52dp"
+                android:background="@drawable/top_banner_count"
+                android:paddingHorizontal="8dp"
+                android:text="4 / 20"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                android:paddingVertical="2dp"
+                app:layout_constraintBottom_toTopOf="@id/tl_webtoon_tab_menu"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginRight="20dp"
+                android:elevation = "@dimen/cardview_default_elevation"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="210dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/top_banner"
+                app:layout_constraintBottom_toTopOf="@id/tl_webtoon_tab_menu"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tl_webtoon_tab_menu"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/vp_top_banner"
+                app:tabIndicatorColor="#17D06B"
+                app:tabRippleColor="#17D06B"
+                app:tabSelectedTextColor="#17D06B"
+                app:tabTextColor="@color/black" />
+
+            <View
+                android:id="@+id/menu_line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#C4C4C4"
+                app:layout_constraintTop_toBottomOf="@id/tl_webtoon_tab_menu" />
+
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/vp_webtoon_list"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tl_webtoon_tab_menu" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <View
+        android:id="@+id/bottom_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#C4C4C4"
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation_bar" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation_bar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="4dp"
+        android:background="@color/white"
+        app:itemIconSize="43dp"
+        app:itemPaddingBottom="0dp"
+        app:itemPaddingTop="0dp"
+        app:itemRippleColor="@color/white"
+        app:labelVisibilityMode="unlabeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/bottom_menu" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

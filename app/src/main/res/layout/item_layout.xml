@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_left_title_image"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/webtoon_frame"
+        android:clipToOutline="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/item_1"
+        app:layout_constraintBottom_toTopOf="@id/tv_left_title"
+        app:layout_constraintEnd_toStartOf="@id/iv_center_title_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintWidth_percent="0.31" />
+
+    <ImageView
+        android:id="@+id/iv_left_new_upload"
+        android:layout_width="18dp"
+        android:layout_height="15dp"
+        android:layout_marginRight="4dp"
+        android:src="@drawable/up_load"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@id/tv_left_title"
+        app:layout_constraintEnd_toStartOf="@id/tv_left_title"
+        app:layout_constraintStart_toStartOf="@id/iv_left_title_image"
+        app:layout_constraintTop_toTopOf="@id/tv_left_title" />
+
+    <TextView
+        android:id="@+id/tv_left_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="화산귀환"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/tv_left_team_name"
+        app:layout_constraintEnd_toEndOf="@id/iv_left_title_image"
+        app:layout_constraintStart_toEndOf="@id/iv_left_new_upload"
+        app:layout_constraintTop_toBottomOf="@id/iv_left_title_image"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/tv_left_team_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="LICO / 나라"
+        android:textColor="@color/gray"
+        android:textSize="9sp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tv_left_star_point"
+        app:layout_constraintStart_toStartOf="@id/iv_left_new_upload"
+        app:layout_constraintTop_toBottomOf="@id/tv_left_title" />
+
+    <TextView
+        android:id="@+id/tv_left_star_point"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:text="★ 9.93"
+        android:textColor="@color/gray"
+        android:textSize="9sp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_left_team_name"
+        app:layout_constraintEnd_toEndOf="@id/iv_left_title_image"
+        app:layout_constraintStart_toEndOf="@id/tv_left_team_name"
+        app:layout_constraintTop_toTopOf="@id/tv_left_team_name" />
+
+    <ImageView
+        android:id="@+id/iv_center_title_image"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/webtoon_frame"
+        android:clipToOutline="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/item_2"
+        app:layout_constraintEnd_toStartOf="@id/iv_right_title_image"
+        app:layout_constraintStart_toEndOf="@id/iv_left_title_image"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.31" />
+
+    <ImageView
+        android:id="@+id/iv_center_new_upload"
+        android:layout_width="18dp"
+        android:layout_height="15dp"
+        android:layout_marginRight="4dp"
+        android:src="@drawable/up_load"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@id/tv_center_title"
+        app:layout_constraintEnd_toStartOf="@id/tv_center_title"
+        app:layout_constraintStart_toStartOf="@id/iv_center_title_image"
+        app:layout_constraintTop_toTopOf="@id/tv_center_title" />
+
+    <TextView
+        android:id="@+id/tv_center_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="역대급 영지 설계사"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/tv_center_team_name"
+        app:layout_constraintEnd_toEndOf="@id/iv_center_title_image"
+        app:layout_constraintStart_toEndOf="@id/iv_center_new_upload"
+        app:layout_constraintTop_toBottomOf="@id/iv_center_title_image"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/tv_center_team_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="이현민 / 김현수 / 문백경"
+        android:textColor="@color/gray"
+        android:textSize="9sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tv_center_star_point"
+        app:layout_constraintStart_toStartOf="@id/iv_center_new_upload"
+        app:layout_constraintTop_toBottomOf="@id/tv_center_title"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/tv_center_star_point"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:text="★ 9.97"
+        android:textColor="@color/gray"
+        android:textSize="9sp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_center_team_name"
+        app:layout_constraintEnd_toEndOf="@id/iv_center_title_image"
+        app:layout_constraintStart_toEndOf="@id/tv_center_team_name"
+        app:layout_constraintTop_toTopOf="@id/tv_center_team_name" />
+
+    <ImageView
+        android:id="@+id/iv_right_title_image"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/webtoon_frame"
+        android:clipToOutline="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/item_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/iv_center_title_image"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.31" />
+
+    <ImageView
+        android:id="@+id/iv_right_new_upload"
+        android:layout_width="18dp"
+        android:layout_height="15dp"
+        android:layout_marginRight="4dp"
+        android:src="@drawable/up_load"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/tv_right_title"
+        app:layout_constraintEnd_toStartOf="@id/tv_right_title"
+        app:layout_constraintStart_toStartOf="@id/iv_right_title_image"
+        app:layout_constraintTop_toTopOf="@id/tv_right_title" />
+
+    <TextView
+        android:id="@+id/tv_right_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="내가 키운 S급들"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/tv_right_team_name"
+        app:layout_constraintEnd_toEndOf="@id/iv_right_title_image"
+        app:layout_constraintStart_toEndOf="@id/iv_right_new_upload"
+        app:layout_constraintTop_toBottomOf="@id/iv_right_title_image"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/tv_right_team_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="seri / 비완 / 근서"
+        android:textColor="@color/gray"
+        android:textSize="9sp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tv_right_star_point"
+        app:layout_constraintStart_toStartOf="@id/iv_right_new_upload"
+        app:layout_constraintTop_toBottomOf="@id/tv_right_title" />
+
+    <TextView
+        android:id="@+id/tv_right_star_point"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:text="★ 9.93"
+        android:textColor="@color/gray"
+        android:textSize="9sp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_right_team_name"
+        app:layout_constraintEnd_toEndOf="@id/iv_right_title_image"
+        app:layout_constraintStart_toEndOf="@id/tv_right_team_name"
+        app:layout_constraintTop_toTopOf="@id/tv_right_team_name" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
