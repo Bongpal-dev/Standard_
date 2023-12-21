@@ -11,6 +11,7 @@
         android:layout_marginTop="8dp"
         android:adjustViewBounds="true"
         android:background="@drawable/webtoon_frame"
+        android:outlineProvider="background"
         android:clipToOutline="true"
         android:scaleType="centerCrop"
         android:src="@drawable/item_1"
