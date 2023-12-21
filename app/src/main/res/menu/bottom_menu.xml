@@ -7,14 +7,13 @@
         android:enabled="true"
         android:icon="@drawable/menu_1_active"
         android:title="웹툰"
-        app:showAsAction="never" />
+        app:showAsAction="always" />
 
     <item
         android:id="@+id/recommand_end"
         android:enabled="true"
         android:icon="@drawable/menu_2_inactive"
         android:title="추천완결"
-
         app:showAsAction="always" />
 
     <item

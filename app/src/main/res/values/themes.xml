@@ -3,6 +3,13 @@
     <style name="Base.Theme.HomeActivity" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="android:navigationBarColor">@color/white</item>
+        <item name="android:enforceStatusBarContrast" tools:targetApi="Q">false</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="M">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
     </style>
 
     <style name="Theme.HomeActivity" parent="Base.Theme.HomeActivity" />

@@ -14,12 +14,13 @@
         android:clipToOutline="true"
         android:scaleType="centerCrop"
         android:src="@drawable/item_1"
+        android:layout_marginStart="8dp"
         app:layout_constraintBottom_toTopOf="@id/tv_left_title"
         app:layout_constraintEnd_toStartOf="@id/iv_center_title_image"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="packed"
-        app:layout_constraintWidth_percent="0.31" />
+        app:layout_constraintWidth_percent="0.3" />
 
     <ImageView
         android:id="@+id/iv_left_new_upload"
@@ -92,7 +93,7 @@
         app:layout_constraintEnd_toStartOf="@id/iv_right_title_image"
         app:layout_constraintStart_toEndOf="@id/iv_left_title_image"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintWidth_percent="0.31" />
+        app:layout_constraintWidth_percent="0.3" />
 
     <ImageView
         android:id="@+id/iv_center_new_upload"
@@ -162,10 +163,11 @@
         android:clipToOutline="true"
         android:scaleType="centerCrop"
         android:src="@drawable/item_3"
+        android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/iv_center_title_image"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintWidth_percent="0.31" />
+        app:layout_constraintWidth_percent="0.3" />
 
     <ImageView
         android:id="@+id/iv_right_new_upload"
