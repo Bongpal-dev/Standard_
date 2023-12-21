@@ -1,86 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
-    <ScrollView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:fillViewport="true"
-        android:scrollbars="none"
-        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation_bar"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="match_parent"
+        android:layout_marginBottom="52dp">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_bar_layout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_height="210dp">
 
-            <androidx.viewpager2.widget.ViewPager2
-                android:id="@+id/vp_top_banner"
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="210dp"
-                android:elevation="2dp"
-                app:layout_constraintBottom_toTopOf="@id/tl_webtoon_tab_menu" />
+                android:layout_height="match_parent">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="52dp"
-                android:background="@drawable/top_banner_count"
-                android:paddingHorizontal="8dp"
-                android:text="4 / 20"
-                android:textColor="@color/white"
-                android:textSize="11sp"
-                android:paddingVertical="2dp"
-                app:layout_constraintBottom_toTopOf="@id/tl_webtoon_tab_menu"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginRight="20dp"
-                android:elevation = "@dimen/cardview_default_elevation"/>
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/vp_top_banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:elevation="2dp" />
 
-            <ImageView
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/top_banner" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/top_banner_count"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="2dp"
+                    android:text="4 / 20"
+                    android:textColor="@color/white"
+                    android:textSize="11sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            android:scrollbars="none"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/app_bar_layout">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="210dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/top_banner"
-                app:layout_constraintBottom_toTopOf="@id/tl_webtoon_tab_menu"
-                app:layout_constraintTop_toTopOf="parent"/>
+                android:layout_height="match_parent">
 
-            <com.google.android.material.tabs.TabLayout
-                android:id="@+id/tl_webtoon_tab_menu"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:background="@color/white"
-                app:layout_constraintTop_toBottomOf="@id/vp_top_banner"
-                app:tabIndicatorColor="#17D06B"
-                app:tabRippleColor="#17D06B"
-                app:tabSelectedTextColor="#17D06B"
-                app:tabTextColor="@color/black" />
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tl_webtoon_tab_menu"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:background="@color/white"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tabIndicatorColor="#17D06B"
+                    app:tabRippleColor="#17D06B"
+                    app:tabSelectedTextColor="#17D06B"
+                    app:tabTextColor="@color/black" />
 
-            <View
-                android:id="@+id/menu_line"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#C4C4C4"
-                app:layout_constraintTop_toBottomOf="@id/tl_webtoon_tab_menu" />
+                <View
+                    android:id="@+id/menu_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#C4C4C4"
+                    app:layout_constraintTop_toBottomOf="@id/tl_webtoon_tab_menu" />
 
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/vp_webtoon_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:nestedScrollingEnabled="false"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tl_webtoon_tab_menu" />
 
-            <androidx.viewpager2.widget.ViewPager2
-                android:id="@+id/vp_webtoon_list"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tl_webtoon_tab_menu" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
 
-    </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
     <View
         android:id="@+id/bottom_line"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="52dp"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="#C4C4C4"
@@ -90,6 +109,7 @@
         android:id="@+id/bottom_navigation_bar"
         android:layout_width="match_parent"
         android:layout_height="48dp"
+        android:layout_gravity="bottom"
         android:layout_marginBottom="4dp"
         android:background="@color/white"
         app:itemIconSize="43dp"
@@ -100,4 +120,4 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:menu="@menu/bottom_menu" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
