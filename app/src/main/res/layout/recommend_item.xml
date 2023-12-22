@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/webtoon_frame"
+        android:clipToOutline="true"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/recommand_frame">
+
+            <ImageView
+                android:id="@+id/iv_thumbnail"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/the_boxer"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="더 복서"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/tv_writer"
+                app:layout_constraintStart_toEndOf="@id/iv_thumbnail"
+                app:layout_constraintTop_toTopOf="@id/iv_thumbnail"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <TextView
+                android:id="@+id/tv_writer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="정지훈"
+                android:textColor="#535353"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@id/tv_intro"
+                app:layout_constraintStart_toStartOf="@id/tv_title"
+                app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+            <TextView
+                android:id="@+id/tv_intro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="충격적 재능을 지닌 기묘한 소년"
+                android:textColor="#919191"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@id/tv_chapter"
+                app:layout_constraintStart_toStartOf="@id/tv_title"
+                app:layout_constraintTop_toBottomOf="@id/tv_writer" />
+
+            <TextView
+                android:id="@+id/tv_chapter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="총134화"
+                android:textColor="#919191"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@id/iv_thumbnail"
+                app:layout_constraintStart_toStartOf="@id/tv_title"
+                app:layout_constraintTop_toBottomOf="@id/tv_intro" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/two"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/webtoon_frame"
+        android:clipToOutline="true"
+        app:layout_constraintTop_toBottomOf="@id/one">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/recommand_frame">
+
+            <ImageView
+                android:id="@+id/iv_two_thumbnail"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/sweet_home"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_two_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="[드라마원작] 스위트홈"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/tv_two_writer"
+                app:layout_constraintStart_toEndOf="@id/iv_two_thumbnail"
+                app:layout_constraintTop_toTopOf="@id/iv_two_thumbnail"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <TextView
+                android:id="@+id/tv_two_writer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="김칸비 / 황영찬"
+                android:textColor="#535353"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@id/tv_two_intro"
+                app:layout_constraintStart_toStartOf="@id/tv_two_title"
+                app:layout_constraintTop_toBottomOf="@id/tv_two_title" />
+
+            <TextView
+                android:id="@+id/tv_two_intro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="스스로 고립된 소년"
+                android:textColor="#919191"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@id/tv_two_chapter"
+                app:layout_constraintStart_toStartOf="@id/tv_two_title"
+                app:layout_constraintTop_toBottomOf="@id/tv_two_writer" />
+
+            <TextView
+                android:id="@+id/tv_two_chapter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="총141화"
+                android:textColor="#919191"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@id/iv_two_thumbnail"
+                app:layout_constraintStart_toStartOf="@id/tv_two_title"
+                app:layout_constraintTop_toBottomOf="@id/tv_two_intro" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/three"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/webtoon_frame"
+        android:clipToOutline="true"
+        app:layout_constraintTop_toBottomOf="@id/two">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/recommand_frame">
+
+            <ImageView
+                android:id="@+id/iv_three_thumbnail"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/weak_hero"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_three_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="약한영웅"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/tv_three_writer"
+                app:layout_constraintStart_toEndOf="@id/iv_three_thumbnail"
+                app:layout_constraintTop_toTopOf="@id/iv_three_thumbnail"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <TextView
+                android:id="@+id/tv_three_writer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="서패스 / 김진석"
+                android:textColor="#535353"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@id/tv_three_intro"
+                app:layout_constraintStart_toStartOf="@id/tv_three_title"
+                app:layout_constraintTop_toBottomOf="@id/tv_three_title" />
+
+            <TextView
+                android:id="@+id/tv_three_intro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="비겁하다…? 애초에 동등한 시작이 아닌데"
+                android:textColor="#919191"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@id/tv_three_chapter"
+                app:layout_constraintStart_toStartOf="@id/tv_three_title"
+                app:layout_constraintTop_toBottomOf="@id/tv_three_writer" />
+
+            <TextView
+                android:id="@+id/tv_three_chapter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="총269화"
+                android:textColor="#919191"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@id/iv_three_thumbnail"
+                app:layout_constraintStart_toStartOf="@id/tv_three_title"
+                app:layout_constraintTop_toBottomOf="@id/tv_three_intro" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
